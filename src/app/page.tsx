@@ -1,12 +1,15 @@
 import Image from "next/image";
+import Navbar from "@/components/header/page";
+import Footer from "@/components/footer/page";
+import VoiceCarousel from "@/components/VoiceCarousel";
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen flex items-center justify-center bg-black overflow-hidden">
-      {/* Background image with dark overlay */}
+    <div className="relative min-h-screen flex flex-col bg-[#181a23] overflow-hidden">
+      {/* Background Image and Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/gallery-bg.jpg" // Replace with your actual background image path
+          src="/gallery-bg.jpg"
           alt="South LA background"
           fill
           style={{ objectFit: "cover" }}
@@ -15,21 +18,41 @@ export default function Home() {
         />
         <div className="absolute inset-0 bg-[#232834] opacity-90" />
       </div>
-      {/* Content */}
-      <main className="relative z-10 flex flex-col items-center justify-center w-full px-4 text-center">
-        <h1 className="text-white text-2xl sm:text-3xl md:text-4xl font-bold mb-6 max-w-2xl">
-          South L.A. is a diverse and complex place with a wide breadth of experiences. Renters are fighting for their place in L.A. and it is crucial that their voices are heard.
+
+      <div className="relative z-10">
+        <Navbar />
+      </div>
+
+      {/* Section 1: Main Intro Content */}
+      <section className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 text-center gap-y-10">
+        <h1 className="text-white sm:text-xl md:text-2xl font-bold font-opensans mb-6 max-w-xl" style={{ fontFamily: 'Work Sans, sans-serif' }}>
+          This site provides a glimpse into the lives of tenants in South Los Angeles through their own words.
         </h1>
-        <p className="text-[#bfc9d1] text-base sm:text-lg max-w-xl mb-12">
-          We hope this site can be used to inform policy that helps protect residents and provides greater stability to communities that need it most.
+        <p className="text-white text-base sm:text-lg max-w-3xl mb-12" style={{ fontFamily: 'Work Sans, sans-serif' }}>
+          We hope the voices and images that follow amplify their experiences and motivate policy interventions that remedy past and present harms. We need to work together with our neighbors and our politicians to make a different future possible.
         </p>
         <a href="#voice-section" className="flex flex-col items-center group">
-          <span className="text-white font-semibold text-base mb-2 group-hover:underline">Explore Voices</span>
-          <svg className="w-8 h-8 text-white group-hover:text-blue-400 transition" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+          <span className="text-[#bde3fe] font-semibold text-large mb-2" style={{ fontFamily: 'Work Sans, sans-serif' }}>Explore Voices</span>
+          <svg className="w-10 h-10 text-[#bde3fe] transition" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
           </svg>
         </a>
-      </main>
+      </section>
+
+      {/* Section 2: Explore Voices */}
+      <section
+        id="voice-section"
+        className="relative z-10 bg-[#191d27] text-black w-full px-6 py-24 text-center"
+      >
+
+        <div className="max-w-3xl mx-auto">
+          <VoiceCarousel />
+        </div>
+      </section>
+
+      <div className="relative z-10">
+        <Footer />
+      </div>
     </div>
   );
 }
