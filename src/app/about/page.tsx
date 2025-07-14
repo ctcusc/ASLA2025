@@ -3,8 +3,8 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Slider from "react-slick";
-import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
+import Navbar from "@/components/header/page";
+import Footer from "@/components/footer/page";
 // import aboutImage from "@/lib/images/homeabout.png";
 
 const images = [
