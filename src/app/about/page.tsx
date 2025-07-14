@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useEffect, useState } from "react";
+import { isMobile } from 'react-device-detect';
 import Image from "next/image";
 import Slider from "react-slick";
 import Navbar from "@/components/header/page";
@@ -62,18 +63,10 @@ const PartnershipCarousel = () => {
 };
 
 const About = () => {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth <= 768);
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
-  }, []);
 
   return (
     <div className="min-h-screen bg-white text-gray-800">
-      <Navbar mobile={isMobile} />
+      <Navbar/>
 
       <div className="max-w-5xl mx-auto px-4 py-8">
         <h1 className="text-4xl font-bold text-center mb-8 tracking-wide">ABOUT</h1>
@@ -89,7 +82,6 @@ const About = () => {
           Esperanza, and T.R.U.S.T. South LA. Together, we can ensure LA is a place where every person can live and thrive.
         </p>
 
-        {/* Optional image block (uncomment and replace if needed) */}
         {/* <Image src={aboutImage} alt="About" className="w-full h-auto mb-6 rounded" /> */}
 
         <p className={`mb-6 ${isMobile ? "text-sm" : "text-base"} leading-relaxed`}>
@@ -130,7 +122,7 @@ const About = () => {
         </div>
       </div>
 
-      <Footer />
+      <Footer/>
     </div>
   );
 };

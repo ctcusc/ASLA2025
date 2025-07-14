@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 
-const Footer: React.FC<FooterProps> = () => {
+const Footer = () => {
 
   return (
     <footer className="bg-primary text-md">
