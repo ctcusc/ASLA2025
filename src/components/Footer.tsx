@@ -102,21 +102,7 @@ const Footer: React.FC<FooterProps> = ({ mobile = false, admin = false, logout }
         {!isMobile && (
           <div>
             <h2 className="text-lg font-semibold">Affordable South LA</h2>
-            {!admin ? (
-              <button
-                className="mt-4 px-4 py-2 bg-black text-white text-xs rounded hover:bg-neutral-800"
-                onClick={() => (window.location.href = '/add-your-voice')}
-              >
-                Add Your Voice
-              </button>
-            ) : (
-              <button
-                className="mt-4 px-4 py-2 bg-red-500 text-white text-xs rounded hover:bg-red-600"
-                onClick={logout}
-              >
-                Logout
-              </button>
-            )}
+            
           </div>
         )}
 
