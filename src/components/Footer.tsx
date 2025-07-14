@@ -1,4 +1,4 @@
-'use client'; // required for App Router interactivity
+'use client';
 
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
@@ -38,7 +38,7 @@ const FooterItems: FooterCategory[] = [
   },
   {
     heading: 'About',
-    subheadings: [{ title: 'Get to know us', url: '/about-the-project' }],
+    subheadings: [{ title: 'Get to know us', url: '/about' }],
     heading2: 'Landscapes',
     subheadings2: [{ title: 'View Images', url: '/landscapes-map' }],
   },
