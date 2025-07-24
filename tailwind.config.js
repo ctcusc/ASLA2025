@@ -1,12 +1,17 @@
 module.exports = {
-    purge: [],
+    content: ['./src/**/*.{js,ts,jsx,tsx}'],
     darkMode: 'media',
     theme: {
         extend: {
             colors: {
-                background: 'rgb(var(--background) / <alpha-value>)',
-                foreground: 'rgb(var(--foreground) / <alpha-value>)',
-                primary: 'rgb(var(--mid-gray) / <alpha-value>)',
+              background: 'var(--background)',
+              foreground: 'var(--foregound)',
+              midgray: 'var(--midgray)',
+              lightgray: 'var(--lightgray)',
+            },
+            fontFamily: {
+              sans: ['Work Sans', 'sans-serif'],
+              mono: ['Montserrat', 'monospace'],
             },
         }
     },
