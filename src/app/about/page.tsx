@@ -104,7 +104,7 @@ const About = () => {
           {["Families", "Children", "Young Adults", "Foster Parents", "Grandparents"].map((group) => (
             <div
               key={group}
-              className="rounded-full border-lightgray border-4 text-lightgray px-2 py-2 align-middle self-center text-center w-[100px] md:w-[150px] md:text-md aspect-square"
+              className="rounded-full border-lightgray border-4 text-lightgray px-2 py-2 flex items-center justify-center text-center w-[120px] md:w-[150px] md:text-md aspect-square"
             >
               {group}
             </div>
