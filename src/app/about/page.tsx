@@ -70,7 +70,7 @@ const About = () => {
       <Navbar/>
 
       <div className="max-w-5xl mx-auto px-4 py-8">
-        <h1 className="text-2xl font-semibold text-left mb-8 tracking-wide">ABOUT</h1>
+        <h1>ABOUT</h1>
 
         <p>
           <span className="font-semibold">In Spring 2018</span>, community members gathered to share their experiences around the 
@@ -106,7 +106,7 @@ const About = () => {
         </p>
 
         <hr className="my-8 border-lightgray" />
-        <h2 className="text-2xl font-semibold text-left mb-8 tracking-wide">VOICES</h2>
+        <h1>VOICES</h1>
 
         <div className="flex flex-wrap justify-center mx-24 gap-4 mb-8">
           {["Families", "Children", "Young Adults", "Foster Parents", "Grandparents"].map((group) => (
@@ -141,7 +141,7 @@ const About = () => {
         </p>
 
         <div className="mt-12">
-          <h2 className="text-2xl font-semibold text-left mb-8 tracking-wide">PARTNERSHIPS</h2>
+          <h1>PARTNERSHIPS</h1>
           <PartnershipCarousel />
         </div>
       </div>

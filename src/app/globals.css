@@ -31,4 +31,9 @@ html, body {
 p {
   margin-bottom: 2rem;
   font-size: large;
+  @apply font-sans max-sm:text-sm;
+}
+
+h1 {
+  @apply text-2xl font-semibold text-left mb-8 tracking-wide max-sm:text-lg;
 }
