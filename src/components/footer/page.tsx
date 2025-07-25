@@ -6,36 +6,37 @@ import Link from 'next/link';
 const Footer = () => {
   const sections = [
     {
-    title: 'VOICES',
-    links: [
-      { href: '/voices', label: 'Community Voices' },
-      { href: '/voices', label: 'Different Futures' },
-    ],
+      title: 'VOICES',
+      links: [
+        { href: '/voices', label: 'Community Voices' },
+        { href: '/voices', label: 'Different Futures' },
+      ],
     },
     {
-    title: 'RESOURCES',
-    links: [
-      { href: '/resources/services', label: 'Services' },
-      { href: '/resources/research', label: 'Research' },
-      { href: '/resources/campaigns', label: 'Campaigns' },
-    ],
+      title: 'RESOURCES',
+      links: [
+        { href: '/resources/services', label: 'Services' },
+        { href: '/resources/research', label: 'Research' },
+        { href: '/resources/campaigns', label: 'Campaigns' },
+      ],
     },
     {
-    title: 'ABOUT',
-    links: [
-      { href: '/about', label: 'Get to Know Us' },
-      { href: '/landscapes-map', label: 'View Images' },
-    ],
+      title: 'ABOUT',
+      links: [{ href: '/about', label: 'Get to Know Us' }],
     },
     {
-    title: 'MORE',
-    links: [{ href: '/contact-us', label: 'Contact Us' }],
+      title: 'LANDSCAPES',
+      links: [{ href: '/landscapes', label: 'View Images' }],
+      },
+    {
+      title: 'MORE',
+      links: [{ href: '/contact-us', label: 'Contact Us' }],
     },
   ];
 
   return (
     <footer className="border-t/midgray shadow-md text-md bg-midgray text-foreground">
-      <div className="max-w-screen-xl grid gap-4 md:grid-cols-5 px-20 py-20 font-mono">
+      <div className="max-w-screen-xl grid gap-4 md:grid-cols-5 px-20 py-20 font-sans">
         <div className="mr-4 text-foreground">
           {Logo}
         </div>
@@ -53,6 +54,15 @@ const Footer = () => {
           </ul>
           </div>
         ))}
+      </div>
+      <div>
+        <p className="text-center text-lightgray test-sm py-4">
+                Copyright &copy;
+                {' '}
+                {new Date().getFullYear()}
+                {' '}
+                Affordable South LA
+        </p>
       </div>
     </footer>
   );

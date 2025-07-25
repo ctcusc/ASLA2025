@@ -8,8 +8,9 @@
 }
 
 :root {
-  --background: #232834;
+  --background: #232730;
   --foreground: #ffffff;
+  --darkgray: #282c31;
   --midgray: #2F343E;
   --lightgray: #C0C8D0;
 }
