@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import { isMobile } from 'react-device-detect';
 import Image from "next/image";
 import Slider from "react-slick";
-import Navbar from "@/components/header/page";
+import Navbar from "@/components/navbar/page";
 import Footer from "@/components/footer/page";
 
 const images = [
@@ -20,32 +20,17 @@ const images = [
 const aboutImage = '/about/homeabout.png';
 
 const PartnershipCarousel = () => {
-  const [slidesToShow, setSlidesToShow] = useState(1);
-
-  useEffect(() => {
-    const updateSlides = () => {
-      const width = window.innerWidth;
-      if (width >= 1200) setSlidesToShow(3);
-      else if (width >= 900) setSlidesToShow(2);
-      else setSlidesToShow(1);
-    };
-
-    updateSlides();
-    window.addEventListener('resize', updateSlides);
-    return () => window.removeEventListener('resize', updateSlides);
-  }, []);
 
   const settings = {
-    dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow,
+    slidesToShow: 3,
     slidesToScroll: 1,
     arrows: true,
   };
 
   return (
-    <div className="my-6 px-2">
+    <div className="my-6 mx-6 px-2">
       <Slider {...settings}>
         {images.map(({ src, alt }) => (
           <div key={src} className="flex justify-center text-center">
@@ -54,7 +39,8 @@ const PartnershipCarousel = () => {
               alt={alt}
               width={300}
               height={150}
-              className="object-contain w-auto h-32 justify-center"
+              className="center object-contain w-auto h-32 mx-auto justify-center"
+              style={{ display: 'center' }}
             />
           </div>
         ))}

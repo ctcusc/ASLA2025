@@ -21,6 +21,14 @@
   }
 }
 
+/* @layer base {
+  @apply bg-background text-foreground;
+
+  h1 {
+    @apply text-2xl font-semibold text-left mb-8 tracking-wide max-sm:text-lg;
+  }
+} */
+
 html, body {
   background: var(--background);
   color: var(--foreground);
@@ -31,7 +39,7 @@ html, body {
 p {
   margin-bottom: 2rem;
   font-size: large;
-  @apply font-sans max-sm:text-sm;
+  @apply font-sans max-sm:text-sm font-light;
 }
 
 h1 {
