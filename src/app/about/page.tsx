@@ -6,17 +6,18 @@ import Image from "next/image";
 import Slider from "react-slick";
 import Navbar from "@/components/header/page";
 import Footer from "@/components/footer/page";
-// import aboutImage from "@/lib/images/homeabout.png";
 
 const images = [
-  { src: '/resources/esperanza.png', alt: 'Esperanza' },
-  { src: '/resources/cdtech.png', alt: 'CDTech' },
-  { src: '/resources/usc.png', alt: 'USC' },
-  { src: '/resources/communitycoalition.png', alt: 'Community Coalition' },
-  { src: '/resources/scope.png', alt: 'SCOPE' },
-  { src: '/resources/trustsouthla.png', alt: 'TRUST South LA' },
-  { src: '/resources/saje.png', alt: 'SAJE' },
+  { src: '/about/partners/esperanza.png', alt: 'Esperanza' },
+  { src: '/about/partners/cdtech.png', alt: 'CDTech' },
+  { src: '/about/partners/usc.png', alt: 'USC' },
+  { src: '/about/partners/communitycoalition.png', alt: 'Community Coalition' },
+  { src: '/about/partners/scope.png', alt: 'SCOPE' },
+  { src: '/about/partners/trustsouthla.png', alt: 'TRUST South LA' },
+  { src: '/about/partners/saje.png', alt: 'SAJE' },
 ];
+
+const aboutImage = '/about/homeabout.png';
 
 const PartnershipCarousel = () => {
   const [slidesToShow, setSlidesToShow] = useState(1);
@@ -47,13 +48,13 @@ const PartnershipCarousel = () => {
     <div className="my-6 px-2">
       <Slider {...settings}>
         {images.map(({ src, alt }) => (
-          <div key={src} className="flex justify-center items-center">
+          <div key={src} className="flex justify-center text-center">
             <Image
               src={src}
               alt={alt}
               width={300}
               height={150}
-              className="object-contain w-auto h-32"
+              className="object-contain w-auto h-32 justify-center"
             />
           </div>
         ))}
@@ -86,7 +87,14 @@ const About = () => {
          promise of home, health, and peace becomes a reality for all.
         </p>
 
-        {/* <Image src={aboutImage} alt="About" className="w-full h-auto mb-6 rounded" /> */}
+        <Image 
+          src={aboutImage} 
+          alt="About" 
+          layout="responsive" 
+          width={0} 
+          height={0} 
+          className="w-full h-auto mb-6 rounded" 
+        />
 
         <p>
           South L.A. is a diverse and complex place with a wide breadth of experiences. This work only captures a portion of resident 
